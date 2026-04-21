@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>血洗いの池 2026 | 残穢 公式サイト</title>
+  <meta name="description" content="学園祭お化け屋敷『血洗いの池 2026 | 残穢』公式サイト。開催情報、注意事項、体験コメントを掲載。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top">血洗いの池 2026</a>
+    <nav class="site-nav">
+      <a href="#story">物語</a>
+      <a href="#info">開催情報</a>
+      <a href="#guide">案内</a>
+      <a href="#comments">コメント</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-inner">
+        <p class="eyebrow">2025年版の続編</p>
+        <h1>血洗いの池 2026 <span>残穢</span></h1>
+        <p class="hero-copy">2025年に語られた噂の続きを体験する、学園祭向けお化け屋敷の公式ページです。</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#info">開催情報を見る</a>
+          <a class="button button-secondary" href="#comments">感想を見る</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="notice container">
+      <div class="notice-card">
+        <p class="notice-label">お知らせ</p>
+        <p id="eventNotice">2026年の開催情報は順次公開予定です。最新情報は公式案内をご確認ください。</p>
+      </div>
+      <div class="countdown-card">
+        <p class="notice-label">開催まで</p>
+        <div id="countdown" class="countdown">開催日時は近日公開</div>
+      </div>
+    </section>
+
+    <section id="story" class="section container">
+      <div class="section-heading">
+        <p class="section-kicker">STORY</p>
+        <h2>去年の続きが、今年の舞台になる。</h2>
+      </div>
+      <div class="grid two">
+        <article class="card">
+          <h3>2025</h3>
+          <p>前作で残された噂や記録が、2026年版の物語につながります。</p>
+        </article>
+        <article class="card">
+          <h3>2026</h3>
+          <p>今年は新しい演出と構成で、来場者向けに体験型のストーリーを届けます。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="info" class="section section-dark">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">INFORMATION</p>
+          <h2>開催情報</h2>
+        </div>
+        <div class="grid three" id="infoCards"></div>
+        <div class="schedule-block card">
+          <h3>日程案内</h3>
+          <div id="scheduleList" class="schedule-list"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="guide" class="section container">
+      <div class="section-heading">
+        <p class="section-kicker">GUIDE</p>
+        <h2>ご来場前のご案内</h2>
+      </div>
+      <div class="grid three">
+        <article class="card step-card"><span class="step-number">01</span><h3>受付</h3><p>待機列に沿ってお並びください。</p></article>
+        <article class="card step-card"><span class="step-number">02</span><h3>体験</h3><p>暗所演出があります。走らず、スタッフの案内に従ってください。</p></article>
+        <article class="card step-card"><span class="step-number">03</span><h3>感想投稿</h3><p>体験後はコメント欄から感想を投稿できます。</p></article>
+      </div>
+      <div class="warning card">
+        <h3>注意事項</h3>
+        <ul>
+          <li>暗さ・音響演出があります。</li>
+          <li>体調が優れない場合は参加をお控えください。</li>
+          <li>他のお客様の迷惑になる行為はご遠慮ください。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="comments" class="section section-blood">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">COMMENTS</p>
+          <h2>体験コメント</h2>
+          <p class="section-text">来場後の感想を投稿できます。強いネタバレは控えてください。</p>
+        </div>
+        <div class="comments-layout">
+          <form id="commentForm" class="card comment-form">
+            <label>お名前<input id="nickname" name="nickname" type="text" maxlength="20" placeholder="匿名でもOK"></label>
+            <label>ひとこと<textarea id="commentText" name="comment" rows="5" maxlength="200" placeholder="感想を書いてください" required></textarea></label>
+            <label>体験タイプ<select id="commentTag" name="tag"><option value="初参加">初参加</option><option value="リピーター">リピーター</option><option value="友達と参加">友達と参加</option><option value="一人で参加">一人で参加</option></select></label>
+            <button class="button button-primary" type="submit">感想を送信</button>
+            <p id="commentStatus" class="form-status">コメント機能は接続準備中です。接続後はここから投稿できます。</p>
+          </form>
+          <div class="card comments-panel">
+            <div class="comments-panel-head"><h3>最新の感想</h3><button id="reloadComments" class="button button-secondary" type="button">再読み込み</button></div>
+            <div id="commentsList" class="comments-list"><p class="empty-state">まだ表示できるコメントがありません。</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section container">
+      <div class="section-heading"><p class="section-kicker">FAQ</p><h2>よくある質問</h2></div>
+      <div class="faq-list">
+        <details class="faq-item" open><summary>怖さはどのくらいですか？</summary><p>暗さや音の演出が中心です。</p></details>
+        <details class="faq-item"><summary>並び直しはできますか？</summary><p>当日の混雑状況によります。</p></details>
+        <details class="faq-item"><summary>最新情報はどこで見られますか？</summary><p>このサイトと公式SNSで案内します。</p></details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>血洗いの池 2026 | 残穢</p>
+      <a id="instagramLink" href="#" aria-disabled="true">公式Instagram 準備中</a>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
