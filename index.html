@@ -142,21 +142,23 @@
   <script>
     const cfg={notice:"2026年の開催情報は順次公開予定です。最新情報は公式案内をご確認ください。",countdownTarget:"",instagramUrl:"",commentsApiUrl:"",info:[{title:"会場",text:"学園祭会場内。教室番号や導線は開催直前に更新してください。"},{title:"参加方法",text:"混雑時は整理券制または入場制限を行う場合があります。"},{title:"対象",text:"一般来場者向け。暗所や音の演出があります。"}],schedule:[{day:"Day 1",date:"日程公開予定",time:"近日公開",note:"詳細は後日発表"},{day:"Day 2",date:"日程公開予定",time:"近日公開",note:"詳細は後日発表"}]};
     const byId=id=>document.getElementById(id);
+    const esc=s=>String(s||'').replace(/[&<>\"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]));
     byId('eventNotice').textContent=cfg.notice;
     const infoRoot=byId('infoCards');
-    cfg.info.forEach(v=>{const a=document.createElement('article');a.className='card';a.innerHTML=`<h3>${v.title}</h3><p>${v.text}</p>`;infoRoot.appendChild(a);});
+    cfg.info.forEach(v=>{const a=document.createElement('article');a.className='card';a.innerHTML=`<h3>${esc(v.title)}</h3><p>${esc(v.text)}</p>`;infoRoot.appendChild(a);});
     const scheduleRoot=byId('scheduleList');
-    cfg.schedule.forEach(v=>{const a=document.createElement('article');a.className='schedule-item';a.innerHTML=`<div class="schedule-date">${v.day}<br>${v.date}</div><div><strong>${v.time}</strong><p>${v.note}</p></div>`;scheduleRoot.appendChild(a);});
-    if(!cfg.countdownTarget){byId('countdown').textContent='開催日時は近日公開';}
+    cfg.schedule.forEach(v=>{const a=document.createElement('article');a.className='schedule-item';a.innerHTML=`<div class="schedule-date">${esc(v.day)}<br>${esc(v.date)}</div><div><strong>${esc(v.time)}</strong><p>${esc(v.note)}</p></div>`;scheduleRoot.appendChild(a);});
+    const countdown=byId('countdown');
+    if(!cfg.countdownTarget){countdown.textContent='開催日時は近日公開';}else{const target=new Date(cfg.countdownTarget).getTime();const tick=()=>{const diff=target-Date.now();if(diff<=0){countdown.textContent='開催中または終了しました';return;}const d=Math.floor(diff/86400000),h=Math.floor(diff/3600000)%24,m=Math.floor(diff/60000)%60,s=Math.floor(diff/1000)%60;countdown.textContent=`${d}日 ${h}時間 ${m}分 ${s}秒`;};tick();setInterval(tick,1000);}
     const instagram=byId('instagramLink');
     if(cfg.instagramUrl){instagram.href=cfg.instagramUrl;instagram.textContent='公式Instagram';instagram.removeAttribute('aria-disabled');}
     const commentsList=byId('commentsList');
     const commentStatus=byId('commentStatus');
     const form=byId('commentForm');
-    const renderFallback=()=>{commentsList.innerHTML='<p class="empty-state">コメント機能はまだ接続されていません。Apps Script のURLを設定すると公開できます。</p>';commentStatus.textContent='Apps Script のURLを設定すると投稿できます。';};
-    renderFallback();
-    byId('reloadComments').addEventListener('click',renderFallback);
-    form.addEventListener('submit',e=>{e.preventDefault();renderFallback();});
+    async function loadComments(){if(!cfg.commentsApiUrl){commentsList.innerHTML='<p class="empty-state">コメント機能はまだ接続されていません。Apps Script のURLを設定すると公開できます。</p>';commentStatus.textContent='Apps Script のURLを設定すると投稿できます。';return;}commentsList.innerHTML='<p class="empty-state">読み込み中...</p>';try{const res=await fetch(cfg.commentsApiUrl+'?mode=list',{cache:'no-store'});const data=await res.json();const items=Array.isArray(data.comments)?data.comments:[];if(!items.length){commentsList.innerHTML='<p class="empty-state">まだコメントがありません。</p>';return;}commentsList.innerHTML=items.map(v=>`<article class="comment-item"><div class="comment-meta"><span>${esc(v.nickname||'匿名')}</span><span>${esc(v.tag||'感想')}</span><span>${esc(v.createdAt||'')}</span></div><p>${esc(v.comment||'')}</p></article>`).join('');}catch(e){commentsList.innerHTML='<p class="empty-state">コメントを読み込めませんでした。</p>';}}
+    form.addEventListener('submit',async e=>{e.preventDefault();if(!cfg.commentsApiUrl){commentStatus.textContent='Apps Script のURLを設定すると投稿できます。';return;}const payload={nickname:byId('nickname').value.trim()||'匿名',comment:byId('commentText').value.trim(),tag:byId('commentTag').value};if(!payload.comment){commentStatus.textContent='感想を入力してください。';return;}commentStatus.textContent='送信中...';try{const res=await fetch(cfg.commentsApiUrl,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});const data=await res.json();if(!data.ok)throw new Error('failed');commentStatus.textContent='送信しました。ありがとうございました。';form.reset();loadComments();}catch(err){commentStatus.textContent='送信に失敗しました。時間をおいて再度お試しください。';}});
+    byId('reloadComments').addEventListener('click',loadComments);
+    loadComments();
   </script>
 </body>
 </html>
