@@ -8,7 +8,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <style>
+    body{margin:0;font-family:"Zen Kaku Gothic New",system-ui,sans-serif;background:#0b0b10;color:#f7f4ef;line-height:1.7}a{text-decoration:none;color:inherit}.container{width:min(1080px,calc(100% - 32px));margin:0 auto}.site-header{position:sticky;top:0;z-index:10;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:14px 20px;background:rgba(8,8,12,.88);border-bottom:1px solid rgba(255,255,255,.08);backdrop-filter:blur(10px)}.brand{font-family:"Noto Serif JP",serif;font-weight:900}.site-nav{display:flex;flex-wrap:wrap;gap:14px;color:#d0caca}.hero{padding:96px 0 88px;background:radial-gradient(circle at top,rgba(150,40,50,.28),transparent 32%),linear-gradient(180deg,#12121a,#09090d)}.hero h1,.section-heading h2{font-family:"Noto Serif JP",serif;line-height:1.15}.hero h1{margin:0 0 16px;font-size:clamp(2.8rem,8vw,5.4rem)}.hero h1 span{display:block;font-size:.56em;color:#db8a91;margin-top:8px}.hero-copy{max-width:720px;color:#d0caca}.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}.button{display:inline-block;border-radius:999px;padding:12px 18px;font-weight:700;border:0;cursor:pointer}.button-primary{background:#9b2731;color:#fff}.button-secondary{border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.03);color:#fff}.notice{display:grid;grid-template-columns:1.3fr 1fr;gap:16px;margin-top:-28px}.notice-card,.countdown-card,.card{background:#15151d;border:1px solid rgba(255,255,255,.08);border-radius:22px;padding:22px}.notice-label,.eyebrow,.section-kicker{margin:0 0 10px;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:#d3be8a}.countdown{font-family:"Noto Serif JP",serif;font-size:1.6rem}.section{padding:84px 0}.section-dark{background:rgba(255,255,255,.02)}.section-accent{background:linear-gradient(180deg,rgba(155,39,49,.12),transparent)}.section-heading{margin-bottom:28px}.grid{display:grid;gap:16px}.grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}.card p,.card li,.section-text{color:#d0caca}.step-number{display:inline-block;margin-bottom:12px;font:700 1.9rem "Noto Serif JP",serif;color:#db8a91}.warning ul{padding-left:18px;margin:0}.schedule-list{display:grid;gap:12px}.schedule-item{display:grid;grid-template-columns:140px 1fr;gap:14px;padding:14px;border-radius:16px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06)}.schedule-date{font-weight:700;color:#d3be8a}.comments-layout{display:grid;grid-template-columns:1fr 1.05fr;gap:16px}.comment-form label{display:grid;gap:8px;margin-bottom:16px}.comment-form input,.comment-form textarea,.comment-form select{width:100%;padding:14px;border-radius:14px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.03);color:#fff;font:inherit}.comments-panel-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:14px}.comments-list{display:grid;gap:12px}.comment-item{padding:14px;border-radius:16px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06)}.comment-meta{display:flex;gap:10px;flex-wrap:wrap;color:#d3be8a;font-size:.86rem;margin-bottom:8px}.form-status,.empty-state{color:#d0caca}.faq-list{display:grid;gap:12px}.faq-item{padding:0 18px;border-radius:16px;background:#15151d;border:1px solid rgba(255,255,255,.08)}.faq-item summary{cursor:pointer;padding:18px 0;font-weight:700}.faq-item p{margin:0 0 18px;color:#d0caca}.site-footer{border-top:1px solid rgba(255,255,255,.08);padding:24px 0;color:#d0caca}.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}@media(max-width:900px){.notice,.grid.two,.grid.three,.comments-layout,.schedule-item{grid-template-columns:1fr}}@media(max-width:640px){.site-header{flex-direction:column;align-items:flex-start}.section{padding:72px 0}.hero{padding:80px 0 68px}}
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -70,7 +72,7 @@
           <h2>開催情報</h2>
         </div>
         <div class="grid three" id="infoCards"></div>
-        <div class="schedule-block card">
+        <div class="card">
           <h3>日程案内</h3>
           <div id="scheduleList" class="schedule-list"></div>
         </div>
@@ -83,9 +85,9 @@
         <h2>ご来場前のご案内</h2>
       </div>
       <div class="grid three">
-        <article class="card step-card"><span class="step-number">01</span><h3>受付</h3><p>待機列に沿ってお並びください。</p></article>
-        <article class="card step-card"><span class="step-number">02</span><h3>体験</h3><p>暗所演出があります。走らず、スタッフの案内に従ってください。</p></article>
-        <article class="card step-card"><span class="step-number">03</span><h3>感想投稿</h3><p>体験後はコメント欄から感想を投稿できます。</p></article>
+        <article class="card"><span class="step-number">01</span><h3>受付</h3><p>待機列に沿ってお並びください。</p></article>
+        <article class="card"><span class="step-number">02</span><h3>体験</h3><p>暗所演出があります。走らず、スタッフの案内に従ってください。</p></article>
+        <article class="card"><span class="step-number">03</span><h3>感想投稿</h3><p>体験後はコメント欄から感想を投稿できます。</p></article>
       </div>
       <div class="warning card">
         <h3>注意事項</h3>
@@ -97,7 +99,7 @@
       </div>
     </section>
 
-    <section id="comments" class="section section-blood">
+    <section id="comments" class="section section-accent">
       <div class="container">
         <div class="section-heading">
           <p class="section-kicker">COMMENTS</p>
@@ -137,6 +139,24 @@
     </div>
   </footer>
 
-  <script src="app.js"></script>
+  <script>
+    const cfg={notice:"2026年の開催情報は順次公開予定です。最新情報は公式案内をご確認ください。",countdownTarget:"",instagramUrl:"",commentsApiUrl:"",info:[{title:"会場",text:"学園祭会場内。教室番号や導線は開催直前に更新してください。"},{title:"参加方法",text:"混雑時は整理券制または入場制限を行う場合があります。"},{title:"対象",text:"一般来場者向け。暗所や音の演出があります。"}],schedule:[{day:"Day 1",date:"日程公開予定",time:"近日公開",note:"詳細は後日発表"},{day:"Day 2",date:"日程公開予定",time:"近日公開",note:"詳細は後日発表"}]};
+    const byId=id=>document.getElementById(id);
+    byId('eventNotice').textContent=cfg.notice;
+    const infoRoot=byId('infoCards');
+    cfg.info.forEach(v=>{const a=document.createElement('article');a.className='card';a.innerHTML=`<h3>${v.title}</h3><p>${v.text}</p>`;infoRoot.appendChild(a);});
+    const scheduleRoot=byId('scheduleList');
+    cfg.schedule.forEach(v=>{const a=document.createElement('article');a.className='schedule-item';a.innerHTML=`<div class="schedule-date">${v.day}<br>${v.date}</div><div><strong>${v.time}</strong><p>${v.note}</p></div>`;scheduleRoot.appendChild(a);});
+    if(!cfg.countdownTarget){byId('countdown').textContent='開催日時は近日公開';}
+    const instagram=byId('instagramLink');
+    if(cfg.instagramUrl){instagram.href=cfg.instagramUrl;instagram.textContent='公式Instagram';instagram.removeAttribute('aria-disabled');}
+    const commentsList=byId('commentsList');
+    const commentStatus=byId('commentStatus');
+    const form=byId('commentForm');
+    const renderFallback=()=>{commentsList.innerHTML='<p class="empty-state">コメント機能はまだ接続されていません。Apps Script のURLを設定すると公開できます。</p>';commentStatus.textContent='Apps Script のURLを設定すると投稿できます。';};
+    renderFallback();
+    byId('reloadComments').addEventListener('click',renderFallback);
+    form.addEventListener('submit',e=>{e.preventDefault();renderFallback();});
+  </script>
 </body>
 </html>
