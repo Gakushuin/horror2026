@@ -3,162 +3,254 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>血洗いの池 2026 | 残穢 公式サイト</title>
-  <meta name="description" content="学園祭お化け屋敷『血洗いの池 2026 | 残穢』公式サイト。開催情報、注意事項、体験コメントを掲載。">
+  <title>血洗いの池 〜残穢・再臨〜 | 2026公式サイト</title>
+  <meta name="description" content="2025年版の続編として制作された、2026年版お化け屋敷『血洗いの池 〜残穢・再臨〜』公式サイト。開催情報、物語、注意事項、体験コメントを掲載。">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800;900&family=Yuji+Syuku&display=swap" rel="stylesheet">
   <style>
-    body{margin:0;font-family:"Zen Kaku Gothic New",system-ui,sans-serif;background:#0b0b10;color:#f7f4ef;line-height:1.7}a{text-decoration:none;color:inherit}.container{width:min(1080px,calc(100% - 32px));margin:0 auto}.site-header{position:sticky;top:0;z-index:10;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:14px 20px;background:rgba(8,8,12,.88);border-bottom:1px solid rgba(255,255,255,.08);backdrop-filter:blur(10px)}.brand{font-family:"Noto Serif JP",serif;font-weight:900}.site-nav{display:flex;flex-wrap:wrap;gap:14px;color:#d0caca}.hero{padding:96px 0 88px;background:radial-gradient(circle at top,rgba(150,40,50,.28),transparent 32%),linear-gradient(180deg,#12121a,#09090d)}.hero h1,.section-heading h2{font-family:"Noto Serif JP",serif;line-height:1.15}.hero h1{margin:0 0 16px;font-size:clamp(2.8rem,8vw,5.4rem)}.hero h1 span{display:block;font-size:.56em;color:#db8a91;margin-top:8px}.hero-copy{max-width:720px;color:#d0caca}.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}.button{display:inline-block;border-radius:999px;padding:12px 18px;font-weight:700;border:0;cursor:pointer}.button-primary{background:#9b2731;color:#fff}.button-secondary{border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.03);color:#fff}.notice{display:grid;grid-template-columns:1.3fr 1fr;gap:16px;margin-top:-28px}.notice-card,.countdown-card,.card{background:#15151d;border:1px solid rgba(255,255,255,.08);border-radius:22px;padding:22px}.notice-label,.eyebrow,.section-kicker{margin:0 0 10px;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:#d3be8a}.countdown{font-family:"Noto Serif JP",serif;font-size:1.6rem}.section{padding:84px 0}.section-dark{background:rgba(255,255,255,.02)}.section-accent{background:linear-gradient(180deg,rgba(155,39,49,.12),transparent)}.section-heading{margin-bottom:28px}.grid{display:grid;gap:16px}.grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}.card p,.card li,.section-text{color:#d0caca}.step-number{display:inline-block;margin-bottom:12px;font:700 1.9rem "Noto Serif JP",serif;color:#db8a91}.warning ul{padding-left:18px;margin:0}.schedule-list{display:grid;gap:12px}.schedule-item{display:grid;grid-template-columns:140px 1fr;gap:14px;padding:14px;border-radius:16px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06)}.schedule-date{font-weight:700;color:#d3be8a}.comments-layout{display:grid;grid-template-columns:1fr 1.05fr;gap:16px}.comment-form label{display:grid;gap:8px;margin-bottom:16px}.comment-form input,.comment-form textarea,.comment-form select{width:100%;padding:14px;border-radius:14px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.03);color:#fff;font:inherit}.comments-panel-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:14px}.comments-list{display:grid;gap:12px}.comment-item{padding:14px;border-radius:16px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06)}.comment-meta{display:flex;gap:10px;flex-wrap:wrap;color:#d3be8a;font-size:.86rem;margin-bottom:8px}.form-status,.empty-state{color:#d0caca}.faq-list{display:grid;gap:12px}.faq-item{padding:0 18px;border-radius:16px;background:#15151d;border:1px solid rgba(255,255,255,.08)}.faq-item summary{cursor:pointer;padding:18px 0;font-weight:700}.faq-item p{margin:0 0 18px;color:#d0caca}.site-footer{border-top:1px solid rgba(255,255,255,.08);padding:24px 0;color:#d0caca}.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}@media(max-width:900px){.notice,.grid.two,.grid.three,.comments-layout,.schedule-item{grid-template-columns:1fr}}@media(max-width:640px){.site-header{flex-direction:column;align-items:flex-start}.section{padding:72px 0}.hero{padding:80px 0 68px}}
+    :root{--bg:#070304;--bg2:#120709;--card:rgba(14,8,10,.78);--line:rgba(255,255,255,.12);--text:#f5eded;--muted:#d6c5c5;--accent:#dd4c4c;--accent2:#ffb7b7;--gold:#d8c18c;--shadow:0 24px 70px rgba(0,0,0,.46);--radius:26px;--container:1160px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:"Noto Sans JP",system-ui,sans-serif;color:var(--text);background:radial-gradient(circle at 50% 0%, rgba(198,53,53,.22), transparent 28%),linear-gradient(180deg,#120809 0%,#070304 40%,#050203 100%);overflow-x:hidden}a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}button{cursor:pointer}img,svg{display:block;max-width:100%}.container{width:min(var(--container),calc(100% - 32px));margin:0 auto}
+    .site-bg,.site-noise,.site-vignette{position:fixed;inset:0;pointer-events:none}.site-bg{z-index:-3;background:radial-gradient(circle at 50% 18%, rgba(255,255,255,.08), transparent 18%),radial-gradient(circle at 50% 40%, rgba(130,20,20,.23), transparent 26%),linear-gradient(180deg, rgba(10,6,8,.18), rgba(4,2,3,.86)),repeating-linear-gradient(90deg, transparent 0 56px, rgba(255,255,255,.02) 56px 57px),linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,0));filter:contrast(1.08) saturate(1.1)}
+    .site-noise{z-index:-2;opacity:.18;background-image:radial-gradient(rgba(255,255,255,.32) .45px, transparent .65px);background-size:6px 6px;mix-blend-mode:soft-light}.site-vignette{z-index:-1;background:radial-gradient(circle at center, transparent 38%, rgba(0,0,0,.34) 74%, rgba(0,0,0,.72) 100%)}
+    .topbar{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:rgba(8,4,5,.72);border-bottom:1px solid rgba(255,255,255,.08)}.topbar.scrolled{background:rgba(8,4,5,.9)}.topbar-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:74px}.brand{display:flex;flex-direction:column;line-height:1}.brand-main{font-family:"Yuji Syuku",serif;font-size:1.38rem}.brand-sub{font-size:.75rem;letter-spacing:.18em;color:var(--accent2);margin-top:6px}.nav{display:flex;flex-wrap:wrap;gap:16px;color:var(--muted);font-size:.95rem}.nav a:hover{color:#fff}.nav-toggle{display:none;background:none;border:0;padding:0}.nav-toggle span{display:block;width:24px;height:2px;background:#fff;margin:5px 0;border-radius:999px}
+    .hero{position:relative;min-height:100svh;padding:120px 0 84px;overflow:hidden}.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 18%, rgba(255,255,255,.08), transparent 22%),linear-gradient(180deg, rgba(0,0,0,.08), rgba(0,0,0,.4)),repeating-linear-gradient(90deg, transparent 0 84px, rgba(255,255,255,.02) 84px 85px);pointer-events:none}.hero::after{content:"";position:absolute;left:50%;top:0;bottom:0;width:min(760px,84vw);transform:translateX(-50%);background:linear-gradient(180deg, rgba(255,255,255,.03), transparent 18%, rgba(255,255,255,.04) 38%, transparent 62%, rgba(255,255,255,.02));filter:blur(18px);opacity:.8;pointer-events:none}.hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(320px,.82fr);gap:28px;align-items:start}.eyebrow,.section-kicker,.mini-kicker{display:inline-flex;align-items:center;gap:10px;padding:8px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.13);background:rgba(255,255,255,.04);text-transform:uppercase;letter-spacing:.16em;font-size:.74rem;font-weight:800;color:var(--gold)}
+    .season-tag{margin:18px 0 0;color:var(--accent2);font-weight:800;letter-spacing:.18em;font-size:.84rem}.hero-title{margin:16px 0;font-family:"Yuji Syuku",serif;font-size:clamp(3rem,8vw,6.4rem);line-height:1;text-shadow:0 2px 16px rgba(0,0,0,.5),0 0 28px rgba(210,58,58,.18)}.hero-title span{display:block;color:var(--accent2);font-size:.64em;margin-top:10px}.hero-title::after{content:"";display:block;width:min(420px,74vw);height:18px;margin-top:14px;background:radial-gradient(circle at 8% 50%, rgba(220,70,70,.92) 0 12%, transparent 13%),radial-gradient(circle at 26% 50%, rgba(220,70,70,.86) 0 10%, transparent 11%),linear-gradient(90deg, rgba(220,70,70,.92), rgba(220,70,70,.16));border-radius:999px;box-shadow:0 10px 28px rgba(220,70,70,.18)}.hero-lead{margin:0;color:var(--muted);font-size:clamp(1rem,2vw,1.14rem);max-width:720px}.hero-badges{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:28px}.glass-chip,.status-card,.countdown-card,.card{border:1px solid rgba(255,255,255,.1);background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));backdrop-filter:blur(16px);box-shadow:var(--shadow)}.glass-chip{border-radius:18px;padding:14px 16px}.glass-chip strong,.status-kicker,.detail-list dt{display:block;font-size:.82rem;color:#d8c7c7}.glass-chip span{display:block;margin-top:4px}.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 18px;border-radius:999px;border:1px solid transparent;font-weight:800;transition:transform .22s ease, box-shadow .22s ease}.btn:hover,.btn:focus-visible{transform:translateY(-2px)}.btn-primary{background:linear-gradient(180deg,#eb5c5c,#b32424);color:#fff;box-shadow:0 14px 28px rgba(215,59,59,.28)}.btn-ghost{background:rgba(255,255,255,.03);border-color:rgba(255,255,255,.14)}
+    .hero-side{display:grid;gap:16px}.status-card,.countdown-card{border-radius:22px;padding:20px}.status-head,.countdown-head,.comment-head{display:flex;align-items:center;justify-content:space-between;gap:14px}.status-pill{display:inline-flex;align-items:center;gap:8px;min-height:34px;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);font-size:.84rem;font-weight:800}.status-pill::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor;box-shadow:0 0 0 6px rgba(255,255,255,.04)}.status-pill.before{color:#ffd8d8}.status-pill.live{color:#a6f1a6}.status-pill.ended{color:#f5ca7d}.status-body{display:grid;gap:14px;margin-top:16px}.status-row{display:flex;justify-content:space-between;gap:12px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,.08)}.status-row:last-child{padding-bottom:0;border-bottom:0}.countdown-title{margin:0;font-size:1rem;font-weight:800}.countdown-sub{margin:10px 0 0;color:var(--muted);font-size:.94rem}.countdown-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:16px}.countbox{padding:14px 10px;border-radius:16px;background:rgba(255,255,255,.05);text-align:center}.countbox span{display:block;font-size:clamp(1.4rem,3vw,2rem);font-weight:900}.countbox small{font-size:.76rem;letter-spacing:.08em;color:#d8c7c7}.whisper-box{position:absolute;right:22px;bottom:24px;z-index:2;max-width:390px;padding:14px 16px;border-left:2px solid rgba(215,59,59,.6);background:rgba(0,0,0,.28);backdrop-filter:blur(12px);border-radius:16px}.whisper-label{display:inline-block;margin-bottom:8px;color:var(--accent2);font-weight:800;font-size:.82rem;letter-spacing:.1em}.whisper-box p{margin:0;color:var(--muted);font-size:.96rem}
+    .floating-hand{position:absolute;left:50%;bottom:-92px;width:min(430px,62vw);opacity:0;transform:translateX(-50%) translateY(60px) rotate(-3deg);filter:drop-shadow(0 22px 40px rgba(0,0,0,.55));transition:opacity .46s ease,transform .46s ease;pointer-events:none;z-index:1}.floating-hand.show{opacity:.9;transform:translateX(-50%) translateY(0) rotate(-1deg)}
+    .section{position:relative;padding:88px 0}.section-alt{background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01))}.section-head{margin-bottom:28px}.section-head h2,.card h2,.card h3{margin:14px 0 10px;line-height:1.18}.section-head h2,.card h2{font-size:clamp(1.7rem,3.2vw,2.7rem)}.section-head p,.card>p:last-child,.support-note,.footer-note{color:var(--muted)}.story-grid,.guide-grid,.faq-grid,.details-grid,.comments-grid,.highlights-grid,.timeline{display:grid;gap:18px}.story-grid,.guide-grid,.faq-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.highlights-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.details-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.card{border-radius:26px;padding:26px}.quote-card blockquote{margin:10px 0 0;font-family:"Yuji Syuku",serif;font-size:clamp(1.6rem,3vw,2.6rem);line-height:1.5;color:#fff}.quote-note{margin-top:14px}.feature-card{border-radius:24px;padding:24px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.03);box-shadow:var(--shadow)}.feature-num{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:999px;background:rgba(221,76,76,.18);color:var(--accent2);font-weight:900}.step-list,.check-list,.route-list{display:grid;gap:14px;padding-left:18px;margin:0}.step-list li,.check-list li,.route-list li,.detail-list dd,.day-card p,.comment-item p{color:var(--muted)}.detail-list{display:grid;gap:14px;margin:0}.detail-list div{display:grid;grid-template-columns:110px 1fr;gap:14px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,.08)}.detail-list div:last-child{padding-bottom:0;border-bottom:0}.detail-list dd,.detail-list dt{margin:0}.day-schedule{display:grid;gap:12px}.day-card{padding:16px;border-radius:18px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)}.timeline{margin-top:20px}.timeline-item{display:grid;grid-template-columns:120px 1fr;gap:18px;align-items:start}.timeline-year{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:8px 14px;border-radius:999px;background:rgba(221,76,76,.15);color:var(--accent2);font-weight:900}.timeline-content{padding:18px 18px 16px;border-radius:18px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08)}
+    .comments-wrap .comments-grid{grid-template-columns:minmax(0,1fr) minmax(320px,.9fr)}.comment-form{display:grid;gap:10px}.comment-form input,.comment-form textarea{width:100%;padding:14px 16px;border-radius:16px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.03);color:#fff}.comment-actions,.btn-row,.action-stack{display:flex;gap:12px;flex-wrap:wrap}.action-stack{flex-direction:column}.form-note,.form-status{margin:0;font-size:.92rem;color:var(--muted)}.comment-list{display:grid;gap:12px}.comment-empty{padding:18px;border-radius:18px;background:rgba(255,255,255,.03);color:var(--muted)}.comment-item{padding:16px;border-radius:18px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)}.comment-meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px;font-size:.84rem;color:#d9c5c5}.fear-badge{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:999px;background:rgba(221,76,76,.16);color:var(--accent2)}.mini-btn{padding:10px 14px;border-radius:999px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);color:#fff}
+    .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}.reveal.in{opacity:1;transform:none}.reveal-delay-1{transition-delay:.08s}.reveal-delay-2{transition-delay:.16s}.reveal-delay-3{transition-delay:.24s}.cursor-glow{position:fixed;z-index:40;width:180px;height:180px;border-radius:50%;pointer-events:none;background:radial-gradient(circle, rgba(221,76,76,.16), rgba(221,76,76,0) 68%);transform:translate(-50%,-50%);mix-blend-mode:screen;opacity:0}
+    .site-footer{padding:28px 0 40px;border-top:1px solid rgba(255,255,255,.08)}.footer-note{margin:10px 0 0;font-size:.92rem}.footer-copy{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+    @media (max-width:980px){.hero-inner,.story-grid,.guide-grid,.faq-grid,.details-grid,.comments-wrap .comments-grid,.highlights-grid{grid-template-columns:1fr}.hero-badges,.countdown-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.timeline-item{grid-template-columns:1fr}.whisper-box{right:16px;left:16px;max-width:none}}
+    @media (max-width:760px){.nav-toggle{display:block}.nav{position:fixed;inset:74px 16px auto 16px;display:grid;gap:8px;padding:16px;border-radius:24px;background:rgba(12,6,8,.96);border:1px solid rgba(255,255,255,.1);box-shadow:var(--shadow);opacity:0;pointer-events:none;transform:translateY(-8px);transition:.24s}.nav.open{opacity:1;pointer-events:auto;transform:none}.hero{padding-top:108px}.hero-title{font-size:clamp(2.6rem,13vw,4.5rem)}.hero-badges{grid-template-columns:1fr}.countdown-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.countbox span{font-size:1.35rem}}
   </style>
 </head>
 <body>
-  <header class="site-header">
-    <a class="brand" href="#top">血洗いの池 2026</a>
-    <nav class="site-nav">
-      <a href="#story">物語</a>
-      <a href="#info">開催情報</a>
-      <a href="#guide">案内</a>
-      <a href="#comments">コメント</a>
-      <a href="#faq">FAQ</a>
-    </nav>
+  <div class="site-bg" aria-hidden="true"></div>
+  <div class="site-noise" aria-hidden="true"></div>
+  <div class="site-vignette" aria-hidden="true"></div>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <header class="topbar" id="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="#hero"><span class="brand-main">血洗いの池</span><span class="brand-sub">〜残穢・再臨〜</span></a>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="メニューを開く"><span></span><span></span><span></span></button>
+      <nav class="nav" id="siteNav" aria-label="サイト内ナビゲーション">
+        <a href="#story">物語</a>
+        <a href="#highlights">見どころ</a>
+        <a href="#guide">体験ガイド</a>
+        <a href="#details">開催情報</a>
+        <a href="#faq">FAQ</a>
+        <a href="#comments">体験コメント</a>
+      </nav>
+    </div>
   </header>
 
-  <main id="top">
-    <section class="hero">
-      <div class="container hero-inner">
-        <p class="eyebrow">2025年版の続編</p>
-        <h1>血洗いの池 2026 <span>残穢</span></h1>
-        <p class="hero-copy">2025年に語られた噂の続きを体験する、学園祭向けお化け屋敷の公式ページです。</p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="#info">開催情報を見る</a>
-          <a class="button button-secondary" href="#comments">感想を見る</a>
+  <section class="hero" id="hero">
+    <div class="container hero-inner">
+      <div class="hero-left">
+        <p class="eyebrow reveal">2025年版の続編として贈る 2026公式お化け屋敷サイト</p>
+        <p class="season-tag reveal reveal-delay-1">OFFICIAL SEQUEL / 2026 HORROR ATTRACTION</p>
+        <h1 class="hero-title reveal reveal-delay-2">血洗いの池 <span>〜残穢・再臨〜</span></h1>
+        <p class="hero-lead reveal reveal-delay-3">2025年、池のそばで終わったはずの異変は、まだ終わっていなかった。<br>濡れた足跡は校舎の中へ伸び、封鎖された教室の前で止まる。<br>あなたが踏み入れるのは、ただの見学ではない。</p>
+        <div class="hero-badges reveal reveal-delay-3">
+          <div class="glass-chip"><strong>恐怖タイプ</strong><span>和風・静かな不気味さ・接近演出</span></div>
+          <div class="glass-chip"><strong>所要時間</strong><span id="heroDuration">約6〜8分</span></div>
+          <div class="glass-chip"><strong>料金</strong><span id="heroFee">無料</span></div>
+        </div>
+        <div class="cta-row reveal reveal-delay-4">
+          <a class="btn btn-primary" href="#details">開催情報を見る</a>
+          <a class="btn btn-ghost" href="#comments">体験コメントを見る</a>
+          <a class="btn btn-ghost" id="shareButton" href="#">Xで告知する</a>
         </div>
       </div>
-    </section>
-
-    <section class="notice container">
-      <div class="notice-card">
-        <p class="notice-label">お知らせ</p>
-        <p id="eventNotice">2026年の開催情報は順次公開予定です。最新情報は公式案内をご確認ください。</p>
-      </div>
-      <div class="countdown-card">
-        <p class="notice-label">開催まで</p>
-        <div id="countdown" class="countdown">開催日時は近日公開</div>
-      </div>
-    </section>
-
-    <section id="story" class="section container">
-      <div class="section-heading">
-        <p class="section-kicker">STORY</p>
-        <h2>去年の続きが、今年の舞台になる。</h2>
-      </div>
-      <div class="grid two">
-        <article class="card">
-          <h3>2025</h3>
-          <p>前作で残された噂や記録が、2026年版の物語につながります。</p>
-        </article>
-        <article class="card">
-          <h3>2026</h3>
-          <p>今年は新しい演出と構成で、来場者向けに体験型のストーリーを届けます。</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="info" class="section section-dark">
-      <div class="container">
-        <div class="section-heading">
-          <p class="section-kicker">INFORMATION</p>
-          <h2>開催情報</h2>
-        </div>
-        <div class="grid three" id="infoCards"></div>
-        <div class="card">
-          <h3>日程案内</h3>
-          <div id="scheduleList" class="schedule-list"></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="guide" class="section container">
-      <div class="section-heading">
-        <p class="section-kicker">GUIDE</p>
-        <h2>ご来場前のご案内</h2>
-      </div>
-      <div class="grid three">
-        <article class="card"><span class="step-number">01</span><h3>受付</h3><p>待機列に沿ってお並びください。</p></article>
-        <article class="card"><span class="step-number">02</span><h3>体験</h3><p>暗所演出があります。走らず、スタッフの案内に従ってください。</p></article>
-        <article class="card"><span class="step-number">03</span><h3>感想投稿</h3><p>体験後はコメント欄から感想を投稿できます。</p></article>
-      </div>
-      <div class="warning card">
-        <h3>注意事項</h3>
-        <ul>
-          <li>暗さ・音響演出があります。</li>
-          <li>体調が優れない場合は参加をお控えください。</li>
-          <li>他のお客様の迷惑になる行為はご遠慮ください。</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="comments" class="section section-accent">
-      <div class="container">
-        <div class="section-heading">
-          <p class="section-kicker">COMMENTS</p>
-          <h2>体験コメント</h2>
-          <p class="section-text">来場後の感想を投稿できます。強いネタバレは控えてください。</p>
-        </div>
-        <div class="comments-layout">
-          <form id="commentForm" class="card comment-form">
-            <label>お名前<input id="nickname" name="nickname" type="text" maxlength="20" placeholder="匿名でもOK"></label>
-            <label>ひとこと<textarea id="commentText" name="comment" rows="5" maxlength="200" placeholder="感想を書いてください" required></textarea></label>
-            <label>体験タイプ<select id="commentTag" name="tag"><option value="初参加">初参加</option><option value="リピーター">リピーター</option><option value="友達と参加">友達と参加</option><option value="一人で参加">一人で参加</option></select></label>
-            <button class="button button-primary" type="submit">感想を送信</button>
-            <p id="commentStatus" class="form-status">コメント機能は接続準備中です。接続後はここから投稿できます。</p>
-          </form>
-          <div class="card comments-panel">
-            <div class="comments-panel-head"><h3>最新の感想</h3><button id="reloadComments" class="button button-secondary" type="button">再読み込み</button></div>
-            <div id="commentsList" class="comments-list"><p class="empty-state">まだ表示できるコメントがありません。</p></div>
+      <aside class="hero-side reveal reveal-delay-4">
+        <div class="status-card">
+          <div class="status-head"><p class="status-kicker">EVENT STATUS</p><span class="status-pill" id="eventStatus">読み込み中</span></div>
+          <div class="status-body">
+            <div class="status-row"><span>開催日</span><strong id="heroDate">設定中</strong></div>
+            <div class="status-row"><span>場所</span><strong id="heroPlace">設定中</strong></div>
+            <div class="status-row"><span>対象</span><strong id="heroTarget">一般来場者・在校生</strong></div>
           </div>
         </div>
+        <div class="countdown-card" id="countdownPanel" aria-live="polite">
+          <div class="countdown-head"><p class="countdown-title">開幕まで</p></div>
+          <p class="countdown-sub" id="countdownText">日時を読み込み中…</p>
+          <div class="countdown-grid">
+            <div class="countbox"><span id="cdDays">--</span><small>日</small></div>
+            <div class="countbox"><span id="cdHours">--</span><small>時間</small></div>
+            <div class="countbox"><span id="cdMinutes">--</span><small>分</small></div>
+            <div class="countbox"><span id="cdSeconds">--</span><small>秒</small></div>
+          </div>
+        </div>
+      </aside>
+    </div>
+    <div class="whisper-box reveal reveal-delay-4" aria-live="polite"><span class="whisper-label">記録音声</span><p id="whisperText">……水の音が、廊下の奥から近づいてくる。</p></div>
+    <svg class="floating-hand" id="floatingHand" viewBox="0 0 320 420" aria-hidden="true">
+      <defs><filter id="blurShadow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="10"/></filter></defs>
+      <g filter="url(#blurShadow)" opacity=".3"><path d="M90 380c-30-25-52-72-38-120 7-24 22-42 34-63l2-121c0-13 8-24 20-24 12 0 20 10 20 24v70h12V42c0-14 9-26 22-26s22 11 22 26v104h14V24c0-13 9-24 22-24s22 10 22 24v122h13V54c0-13 9-24 22-24s22 10 22 24v159c0 67-31 139-108 183-33 19-95 12-127-16z" fill="#000"/></g>
+      <path d="M92 378c-29-24-50-69-37-115 7-23 22-41 34-61l2-120c0-13 8-23 20-23 12 0 20 10 20 23v69h12V48c0-14 9-25 22-25s22 11 22 25v103h14V30c0-13 9-24 22-24s22 10 22 24v121h13V60c0-13 9-24 22-24s22 10 22 24v157c0 65-31 136-106 178-33 19-94 12-126-17z" fill="#b71922"/>
+      <path d="M245 291c-19 23-50 47-94 56-13 3-35 3-47-2-23-9-40-23-50-39 9 36 30 58 38 65 32 29 93 36 126 17 75-42 106-113 106-178v-31c-11 42-34 82-79 112z" fill="#7f0f17" opacity=".72"/>
+      <path d="M143 330c-6 26-17 54-38 83" stroke="#d94a52" stroke-width="10" stroke-linecap="round" opacity=".8"/>
+      <path d="M188 340c-4 18-10 39-24 67" stroke="#d94a52" stroke-width="9" stroke-linecap="round" opacity=".8"/>
+      <path d="M239 319c1 21-1 50-13 85" stroke="#d94a52" stroke-width="9" stroke-linecap="round" opacity=".78"/>
+      <circle cx="105" cy="408" r="10" fill="#d94a52" opacity=".92"/>
+      <circle cx="162" cy="405" r="8" fill="#d94a52" opacity=".88"/>
+      <circle cx="226" cy="404" r="9" fill="#d94a52" opacity=".9"/>
+    </svg>
+  </section>
+
+  <main>
+    <section class="section" id="story">
+      <div class="container story-grid">
+        <article class="card reveal">
+          <p class="section-kicker">STORY</p>
+          <h2>2025年の後日譚。</h2>
+          <p>文化祭の夜、血洗いの池に関する騒ぎは一度は収まったとされた。しかし数日後、校舎内の封鎖教室の前で濡れた足跡が見つかる。その水跡は毎晩少しずつ増え、今年ついに、来場者の導線まで届いた。</p>
+          <p>2026年版では、前作の不気味さを引き継ぎながら、“池の外へ出てきてしまったもの”を追体験する。あなたは噂を聞く側ではなく、痕跡の中に入っていく側になる。</p>
+        </article>
+        <article class="card reveal reveal-delay-1">
+          <p class="section-kicker">TAGLINE</p>
+          <blockquote style="margin:10px 0 0;font-family:'Yuji Syuku',serif;font-size:clamp(1.6rem,3vw,2.6rem);line-height:1.5;color:#fff">去年、池に沈めたものは、<br>今年、教室のドアを叩いている。</blockquote>
+          <p class="quote-note">前作を知っていると、より深く楽しめる構成です。</p>
+        </article>
       </div>
     </section>
 
-    <section id="faq" class="section container">
-      <div class="section-heading"><p class="section-kicker">FAQ</p><h2>よくある質問</h2></div>
-      <div class="faq-list">
-        <details class="faq-item" open><summary>怖さはどのくらいですか？</summary><p>暗さや音の演出が中心です。</p></details>
-        <details class="faq-item"><summary>並び直しはできますか？</summary><p>当日の混雑状況によります。</p></details>
-        <details class="faq-item"><summary>最新情報はどこで見られますか？</summary><p>このサイトと公式SNSで案内します。</p></details>
+    <section class="section section-alt" id="highlights">
+      <div class="container">
+        <div class="section-head reveal"><p class="section-kicker">HIGHLIGHTS</p><h2>今年の見どころ</h2><p>ただ驚かせるだけではなく、空気ごと怖くなる体験を目指しています。</p></div>
+        <div class="highlights-grid">
+          <article class="feature-card reveal"><span class="feature-num">01</span><h3>静かな恐怖が積み上がる導入</h3><p>待機列から本編まで、異変の気配が少しずつ近づいてくる構成です。</p></article>
+          <article class="feature-card reveal reveal-delay-1"><span class="feature-num">02</span><h3>続編ならではの物語性</h3><p>2025年版の出来事を踏まえた台詞や痕跡が随所に仕込まれています。</p></article>
+          <article class="feature-card reveal reveal-delay-2"><span class="feature-num">03</span><h3>文化祭向けの見やすい導線</h3><p>初見の方でも入りやすく、前作ファンにも刺さるバランスにしています。</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="guide">
+      <div class="container guide-grid">
+        <div class="card reveal">
+          <p class="section-kicker">HOW TO ENJOY</p>
+          <h2>体験の流れ</h2>
+          <ol class="step-list">
+            <li><strong>受付</strong><span>混雑時は列にお並びください。スタッフが順番に案内します。</span></li>
+            <li><strong>導入説明</strong><span>世界観や注意事項を短くご案内します。</span></li>
+            <li><strong>本編体験</strong><span>教室内を進みながら異変の正体に近づいていきます。</span></li>
+            <li><strong>退出・感想投稿</strong><span>体験後はこのサイトからコメントを投稿できます。</span></li>
+          </ol>
+        </div>
+        <div class="card reveal reveal-delay-1">
+          <p class="section-kicker">FOR FIRST-TIME VISITORS</p>
+          <h2>来場前に知っておくと安心なこと</h2>
+          <ul class="check-list">
+            <li>大きな音や暗い場所が苦手な方は無理をしないでください。</li>
+            <li>走る、押す、展示物に強く触れる行為はご遠慮ください。</li>
+            <li>小さなお子さまは保護者の方と一緒の来場をおすすめします。</li>
+            <li>混雑状況によっては待ち時間が発生する場合があります。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="details">
+      <div class="container details-grid">
+        <div class="card reveal">
+          <p class="section-kicker">DETAILS</p>
+          <h2>開催情報</h2>
+          <dl class="detail-list">
+            <div><dt>正式名称</dt><dd id="detailTitle">設定中</dd></div>
+            <div><dt>日程</dt><dd id="detailDate">設定中</dd></div>
+            <div><dt>時間</dt><dd id="detailTime">設定中</dd></div>
+            <div><dt>場所</dt><dd id="detailPlace">設定中</dd></div>
+            <div><dt>料金</dt><dd id="detailFee">無料</dd></div>
+            <div><dt>所要時間</dt><dd id="detailDuration">約7分</dd></div>
+            <div><dt>対象</dt><dd id="detailTarget">一般来場者</dd></div>
+          </dl>
+        </div>
+        <div class="card reveal reveal-delay-1">
+          <p class="section-kicker">DAY SCHEDULE</p>
+          <h2>日別スケジュール</h2>
+          <div class="day-schedule" id="daySchedule"></div>
+        </div>
+        <div class="card reveal reveal-delay-2">
+          <p class="section-kicker">JOIN / SHARE</p>
+          <h2>告知と連絡</h2>
+          <div class="action-stack">
+            <a class="btn btn-primary" id="instagramButton" href="#" target="_blank" rel="noopener">Instagramへ行く</a>
+            <a class="btn btn-ghost" href="#comments">感想を投稿する</a>
+            <a class="btn btn-ghost" href="#hero">トップへ戻る</a>
+          </div>
+          <p class="support-note">開催日・場所・Instagramはページ内設定で変更できます。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="timeline">
+      <div class="container">
+        <div class="section-head reveal"><p class="section-kicker">TIMELINE</p><h2>2025から2026へ</h2><p>このサイトだけで、続編の流れが自然に伝わるよう整理しました。</p></div>
+        <div class="timeline">
+          <article class="timeline-item reveal"><span class="timeline-year">2025 秋</span><div class="timeline-content"><h3>発端</h3><p>血洗いの池の周辺で異変が連続し、“池の向こう側から伸びる手”を見たという証言が集まる。</p></div></article>
+          <article class="timeline-item reveal reveal-delay-1"><span class="timeline-year">2025 冬</span><div class="timeline-content"><h3>封鎖</h3><p>事件後、関係教室は一時封鎖。床に残った濡れ跡は、清掃後も夜にだけ現れるようになった。</p></div></article>
+          <article class="timeline-item reveal reveal-delay-2"><span class="timeline-year">2026 春</span><div class="timeline-content"><h3>再発</h3><p>池から離れた校舎内でも水音が報告され、赤い手形が複数確認される。</p></div></article>
+          <article class="timeline-item reveal reveal-delay-3"><span class="timeline-year">2026 現在</span><div class="timeline-content"><h3>残穢・再臨</h3><p>穢れは場所ではなく、人の流れについてきた。次に見つかるのは証拠か、それとも来場者自身か。</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="faq">
+      <div class="container faq-grid">
+        <div class="card reveal"><p class="section-kicker">NOTICE</p><h2>注意事項</h2><ul class="check-list"><li>暗い空間、大きめの音、接近演出、突然の照明変化を含む場合があります。</li><li>安全のため、走る・押す・逆走する・展示物へ触れる行為は禁止です。</li><li>体調に不安がある場合は、無理をせずスタッフへ声をかけてください。</li><li>体験中の撮影可否は入口の案内に従ってください。</li></ul></div>
+        <div class="card reveal reveal-delay-1"><p class="section-kicker">FAQ</p><h2>よくある質問</h2><div class="faq-list"><details open><summary>前作を知らなくても楽しめますか？</summary><p>楽しめます。今作だけでも理解できる構成にしつつ、前作を知るとつながりがより深く分かるようにしています。</p></details><details><summary>どれくらい怖いですか？</summary><p>急な大声だけに頼らず、静かな不安と接近演出で追い詰めるタイプです。</p></details><details><summary>並ぶ時間が長い場合は？</summary><p>待機列自体も体験の一部として楽しめるよう、世界観の断片をサイトや掲示で用意しています。</p></details><details><summary>最新情報はどこで見られますか？</summary><p>このサイトと公式Instagramで案内します。</p></details></div></div>
+      </div>
+    </section>
+
+    <section class="section" id="comments">
+      <div class="container comments-wrap">
+        <div class="section-head reveal"><p class="section-kicker">VOICE</p><h2>体験後コメント</h2><p>公開時に壊れにくい本番版として、感想はこの端末内に保存する方式にしています。</p></div>
+        <div class="comments-grid">
+          <div class="card reveal">
+            <form class="comment-form" id="commentForm">
+              <label for="commentName">表示名</label>
+              <input id="commentName" type="text" maxlength="18" placeholder="例：目撃者 / 名無しでも可">
+              <label for="commentFear">怖さ</label>
+              <input id="commentFear" type="range" min="1" max="5" value="4">
+              <label for="commentText">感想</label>
+              <textarea id="commentText" rows="5" maxlength="140" placeholder="怖かった場面、印象に残った演出、前作とのつながりなどをどうぞ（140文字まで）" required></textarea>
+              <div class="comment-actions"><button class="btn btn-primary" type="submit">投稿する</button><label class="form-note"><input id="shareAfterPost" type="checkbox"> 投稿後にXのシェア画面も開く</label></div>
+              <p class="form-note">※ 個人情報は書かないでください。感想はこの端末にのみ保存されます。</p>
+              <p class="form-status" id="commentStatus" aria-live="polite"></p>
+            </form>
+          </div>
+          <div class="card reveal reveal-delay-1"><div class="comment-head"><h3>みんなの感想</h3><button class="mini-btn" id="clearCommentsButton" type="button">この端末の感想を消す</button></div><div class="comment-list" id="commentList"></div></div>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>血洗いの池 2026 | 残穢</p>
-      <a id="instagramLink" href="#" aria-disabled="true">公式Instagram 準備中</a>
-    </div>
-  </footer>
+  <footer class="site-footer"><div class="container footer-copy"><div><strong>血洗いの池 〜残穢・再臨〜</strong><p class="footer-note">2025年版の続きを、2026年の来場者向けに再構成した本番版サイト。</p></div><div><a class="btn btn-ghost" id="footerInstagram" href="#" target="_blank" rel="noopener">Instagram</a></div></div></footer>
 
   <script>
-    const cfg={notice:"2026年の開催情報は順次公開予定です。最新情報は公式案内をご確認ください。",countdownTarget:"",instagramUrl:"",commentsApiUrl:"",info:[{title:"会場",text:"学園祭会場内。教室番号や導線は開催直前に更新してください。"},{title:"参加方法",text:"混雑時は整理券制または入場制限を行う場合があります。"},{title:"対象",text:"一般来場者向け。暗所や音の演出があります。"}],schedule:[{day:"Day 1",date:"日程公開予定",time:"近日公開",note:"詳細は後日発表"},{day:"Day 2",date:"日程公開予定",time:"近日公開",note:"詳細は後日発表"}]};
-    const byId=id=>document.getElementById(id);
-    const esc=s=>String(s||'').replace(/[&<>\"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]));
-    byId('eventNotice').textContent=cfg.notice;
-    const infoRoot=byId('infoCards');
-    cfg.info.forEach(v=>{const a=document.createElement('article');a.className='card';a.innerHTML=`<h3>${esc(v.title)}</h3><p>${esc(v.text)}</p>`;infoRoot.appendChild(a);});
-    const scheduleRoot=byId('scheduleList');
-    cfg.schedule.forEach(v=>{const a=document.createElement('article');a.className='schedule-item';a.innerHTML=`<div class="schedule-date">${esc(v.day)}<br>${esc(v.date)}</div><div><strong>${esc(v.time)}</strong><p>${esc(v.note)}</p></div>`;scheduleRoot.appendChild(a);});
-    const countdown=byId('countdown');
-    if(!cfg.countdownTarget){countdown.textContent='開催日時は近日公開';}else{const target=new Date(cfg.countdownTarget).getTime();const tick=()=>{const diff=target-Date.now();if(diff<=0){countdown.textContent='開催中または終了しました';return;}const d=Math.floor(diff/86400000),h=Math.floor(diff/3600000)%24,m=Math.floor(diff/60000)%60,s=Math.floor(diff/1000)%60;countdown.textContent=`${d}日 ${h}時間 ${m}分 ${s}秒`;};tick();setInterval(tick,1000);}
-    const instagram=byId('instagramLink');
-    if(cfg.instagramUrl){instagram.href=cfg.instagramUrl;instagram.textContent='公式Instagram';instagram.removeAttribute('aria-disabled');}
-    const commentsList=byId('commentsList');
-    const commentStatus=byId('commentStatus');
-    const form=byId('commentForm');
-    async function loadComments(){if(!cfg.commentsApiUrl){commentsList.innerHTML='<p class="empty-state">コメント機能はまだ接続されていません。Apps Script のURLを設定すると公開できます。</p>';commentStatus.textContent='Apps Script のURLを設定すると投稿できます。';return;}commentsList.innerHTML='<p class="empty-state">読み込み中...</p>';try{const res=await fetch(cfg.commentsApiUrl+'?mode=list',{cache:'no-store'});const data=await res.json();const items=Array.isArray(data.comments)?data.comments:[];if(!items.length){commentsList.innerHTML='<p class="empty-state">まだコメントがありません。</p>';return;}commentsList.innerHTML=items.map(v=>`<article class="comment-item"><div class="comment-meta"><span>${esc(v.nickname||'匿名')}</span><span>${esc(v.tag||'感想')}</span><span>${esc(v.createdAt||'')}</span></div><p>${esc(v.comment||'')}</p></article>`).join('');}catch(e){commentsList.innerHTML='<p class="empty-state">コメントを読み込めませんでした。</p>';}}
-    form.addEventListener('submit',async e=>{e.preventDefault();if(!cfg.commentsApiUrl){commentStatus.textContent='Apps Script のURLを設定すると投稿できます。';return;}const payload={nickname:byId('nickname').value.trim()||'匿名',comment:byId('commentText').value.trim(),tag:byId('commentTag').value};if(!payload.comment){commentStatus.textContent='感想を入力してください。';return;}commentStatus.textContent='送信中...';try{const res=await fetch(cfg.commentsApiUrl,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});const data=await res.json();if(!data.ok)throw new Error('failed');commentStatus.textContent='送信しました。ありがとうございました。';form.reset();loadComments();}catch(err){commentStatus.textContent='送信に失敗しました。時間をおいて再度お試しください。';}});
-    byId('reloadComments').addEventListener('click',loadComments);
-    loadComments();
+    const SITE_CONFIG={title:"血洗いの池 〜残穢・再臨〜",startAt:"2026-11-01T09:00:00+09:00",endAt:"2026-11-02T16:00:00+09:00",place:"学習院高等科 2年E組 教室",fee:"無料",duration:"約6〜8分",target:"一般来場者・在校生",instagramUrl:"https://www.instagram.com/ghs_horrorteam?igsh=dmUyY280aW8xNnlj",shareText:"2025年版の続編『血洗いの池 〜残穢・再臨〜』公式サイト。去年で終わらなかった穢れが、今年は校舎の中へ戻ってくる。",commentStorageKey:"chiarai_2026_comments_v2",whisperLines:["……水の音が、廊下の奥から近づいてくる。","去年は池のそばだけだった。今は、教室の中から聞こえる。","窓の内側に手形が増えていた。外からではない。","出口まで来ても、靴の裏だけが濡れている。","今年の来場者は、目撃者では終われない。"],schedule:[{label:"11月1日（日）",time:"09:00〜16:00",note:"開幕日。前作を知る人向けの演出が特に映える日。"},{label:"11月2日（月）",time:"09:00〜16:00",note:"千秋楽。終盤に向けて混雑しやすいため、早めの来場推奨。"}]};
+    const $=s=>document.querySelector(s); const $$=s=>Array.from(document.querySelectorAll(s));
+    function formatDateJP(date){const y=date.getFullYear(),m=date.getMonth()+1,d=date.getDate(),w=["日","月","火","水","木","金","土"][date.getDay()];return `${y}年${m}月${d}日（${w}）`;}
+    function formatTimeJP(date){return `${String(date.getHours()).padStart(2,"0")}:${String(date.getMinutes()).padStart(2,"0")}`;}
+    function sanitize(text){return text.trim().replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));}
+    function defaultHandle(){const names=["目撃者","夜の来場者","封鎖教室の前にいた人","水面の影","無名の証言者","廊下の足音"];return `${names[Math.floor(Math.random()*names.length)]} #${Math.floor(100+Math.random()*900)}`;}
+    function formatCommentTime(ts){const d=new Date(ts);return `${d.getFullYear()}/${String(d.getMonth()+1).padStart(2,"0")}/${String(d.getDate()).padStart(2,"0")} ${String(d.getHours()).padStart(2,"0")}:${String(d.getMinutes()).padStart(2,"0")}`;}
+    function renderBasicInfo(){const start=new Date(SITE_CONFIG.startAt),end=new Date(SITE_CONFIG.endAt),dateText=`${formatDateJP(start)}〜${formatDateJP(end)}`,timeText=`${formatTimeJP(start)}〜${formatTimeJP(end)}`;document.title=`${SITE_CONFIG.title} | 2026公式サイト`;$("#heroDate").textContent=dateText;$("#heroPlace").textContent=SITE_CONFIG.place;$("#heroFee").textContent=SITE_CONFIG.fee;$("#heroDuration").textContent=SITE_CONFIG.duration;$("#heroTarget").textContent=SITE_CONFIG.target;$("#detailTitle").textContent=SITE_CONFIG.title;$("#detailDate").textContent=dateText;$("#detailTime").textContent=timeText;$("#detailPlace").textContent=SITE_CONFIG.place;$("#detailFee").textContent=SITE_CONFIG.fee;$("#detailDuration").textContent=SITE_CONFIG.duration;$("#detailTarget").textContent=SITE_CONFIG.target;$("#instagramButton").href=SITE_CONFIG.instagramUrl;$("#footerInstagram").href=SITE_CONFIG.instagramUrl;const share=`https://twitter.com/intent/tweet?text=${encodeURIComponent(SITE_CONFIG.shareText)}&url=${encodeURIComponent(location.href)}`;$("#shareButton").href=share;$("#shareButton").target="_blank";$("#shareButton").rel="noopener";const daySchedule=$("#daySchedule");daySchedule.innerHTML=SITE_CONFIG.schedule.map(day=>`<article class="day-card"><strong>${day.label}</strong><p>${day.time}</p><p>${day.note}</p></article>`).join("");}
+    function setupCountdown(){const start=new Date(SITE_CONFIG.startAt),end=new Date(SITE_CONFIG.endAt),panel=$("#countdownPanel"),text=$("#countdownText"),status=$("#eventStatus"),days=$("#cdDays"),hours=$("#cdHours"),minutes=$("#cdMinutes"),seconds=$("#cdSeconds");function update(){const now=new Date(),before=now<start,live=now>=start&&now<=end,target=before?start:end,diff=Math.max(0,target-now);if(before){text.textContent=`${formatDateJP(start)} ${formatTimeJP(start)} 開始予定`;status.textContent="開催前";status.className="status-pill before";panel.classList.remove("is-ended");}else if(live){text.textContent=`開催中。終了予定 ${formatDateJP(end)} ${formatTimeJP(end)}`;status.textContent="開催中";status.className="status-pill live";panel.classList.remove("is-ended");}else{text.textContent="現在は終了済み。来年版を制作する場合はここを書き換えてください。";status.textContent="終了済み";status.className="status-pill ended";panel.classList.add("is-ended");}const total=Math.floor(diff/1000);days.textContent=Math.floor(total/86400);hours.textContent=String(Math.floor((total%86400)/3600)).padStart(2,"0");minutes.textContent=String(Math.floor((total%3600)/60)).padStart(2,"0");seconds.textContent=String(total%60).padStart(2,"0");}update();setInterval(update,1000)}
+    function setupReveal(){if(window.matchMedia("(prefers-reduced-motion: reduce)").matches){$$(".reveal").forEach(el=>el.classList.add("in"));return;}const io=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add("in");io.unobserve(entry.target);}}),{threshold:.14});$$(".reveal").forEach(el=>io.observe(el));}
+    function setupNav(){const btn=$("#navToggle"),nav=$("#siteNav"),top=$("#topbar");btn.addEventListener("click",()=>{const expanded=btn.getAttribute("aria-expanded")==="true";btn.setAttribute("aria-expanded",String(!expanded));nav.classList.toggle("open");});$$("#siteNav a").forEach(a=>a.addEventListener("click",()=>{nav.classList.remove("open");btn.setAttribute("aria-expanded","false");}));const onScroll=()=>top.classList.toggle("scrolled",window.scrollY>12);onScroll();window.addEventListener("scroll",onScroll,{passive:true});}
+    function setupCursorGlow(){const glow=$("#cursorGlow");if(window.matchMedia("(pointer: coarse)").matches){glow.style.display="none";return;}glow.style.opacity="1";window.addEventListener("mousemove",e=>{glow.style.left=`${e.clientX}px`;glow.style.top=`${e.clientY}px`;},{passive:true});}
+    function setupHand(){const hand=$("#floatingHand");let armed=true,timer;const reveal=()=>{hand.classList.add("show");clearTimeout(timer);timer=setTimeout(()=>hand.classList.remove("show"),2600)};window.addEventListener("scroll",()=>{const y=window.scrollY;if(y<80){armed=true;hand.classList.remove("show");return;}if(y>220&&armed){armed=false;reveal();}if(y<160)armed=true;},{passive:true});document.addEventListener("mousemove",e=>{const offset=(e.clientX/window.innerWidth-.5)*24;hand.style.transform=hand.classList.contains("show")?`translateX(calc(-50% + ${offset}px)) translateY(0) rotate(-1deg)`:`translateX(calc(-50% + ${offset}px)) translateY(60px) rotate(-3deg)`;});}
+    function setupWhispers(){const el=$("#whisperText");let i=0;setInterval(()=>{i=(i+1)%SITE_CONFIG.whisperLines.length;el.textContent=SITE_CONFIG.whisperLines[i];},4800)}
+    function loadComments(){try{const raw=localStorage.getItem(SITE_CONFIG.commentStorageKey);return raw?JSON.parse(raw):[]}catch{return[]}}
+    function saveComments(items){localStorage.setItem(SITE_CONFIG.commentStorageKey,JSON.stringify(items.slice(0,60)))}
+    function renderComments(){const list=$("#commentList"),items=loadComments();if(!items.length){list.innerHTML='<div class="comment-empty">まだ感想はありません。最初の目撃者になってください。</div>';return;}list.innerHTML=items.map(item=>`<article class="comment-item"><p>${item.text}</p><div class="comment-meta"><span>${item.name}</span><span>${formatCommentTime(item.createdAt)}</span><span class="fear-badge">怖さ ${item.fear}/5</span></div></article>`).join("")}
+    function setupComments(){const form=$("#commentForm"),nameInput=$("#commentName"),fearInput=$("#commentFear"),textInput=$("#commentText"),status=$("#commentStatus"),shareAfter=$("#shareAfterPost"),clear=$("#clearCommentsButton");renderComments();form.addEventListener("submit",e=>{e.preventDefault();status.textContent="";const cleanText=sanitize(textInput.value),cleanName=sanitize(nameInput.value)||defaultHandle(),fear=Math.max(1,Math.min(5,Number(fearInput.value||4)));if(!cleanText){status.textContent="本文が空です。";return;}const items=loadComments();items.unshift({name:cleanName,text:cleanText,fear,createdAt:Date.now()});saveComments(items);renderComments();nameInput.value="";textInput.value="";fearInput.value="4";status.textContent="投稿しました。";if(shareAfter.checked){const share=`https://twitter.com/intent/tweet?text=${encodeURIComponent(`${SITE_CONFIG.title} 行ってきた：${cleanText}`)}&url=${encodeURIComponent(location.href)}`;window.open(share,"_blank","noopener");}});clear.addEventListener("click",()=>{localStorage.removeItem(SITE_CONFIG.commentStorageKey);renderComments();status.textContent="この端末に保存されていた感想を削除しました。";});}
+    document.addEventListener("DOMContentLoaded",()=>{renderBasicInfo();setupCountdown();setupReveal();setupNav();setupCursorGlow();setupHand();setupWhispers();setupComments();});
   </script>
 </body>
 </html>
