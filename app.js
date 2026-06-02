@@ -12,22 +12,43 @@ const nav = $('#nav');
 const header = $('#siteHeader');
 const apparition = $('#apparition');
 
-body.classList.add('locked');
-
 function closeGate() {
-  gate.classList.add('is-hidden');
+  const currentGate = $('#gate');
   body.classList.remove('locked');
-  setTimeout(() => gate.remove(), 1000);
+  if (!currentGate) return;
+  currentGate.classList.add('is-hidden');
+  currentGate.style.pointerEvents = 'none';
+  setTimeout(() => {
+    if (currentGate && currentGate.parentNode) currentGate.remove();
+  }, 900);
 }
 
-enterBtn?.addEventListener('click', closeGate);
-skipBtn?.addEventListener('click', closeGate);
+window.forceEnterHorror = closeGate;
 
-setTimeout(() => {
-  if (gate && !gate.classList.contains('is-hidden')) {
-    skipBtn.textContent = '入場する';
-  }
-}, 2600);
+if (gate) {
+  body.classList.add('locked');
+  enterBtn?.addEventListener('click', closeGate);
+  enterBtn?.addEventListener('pointerup', closeGate);
+  skipBtn?.addEventListener('click', closeGate);
+  skipBtn?.addEventListener('pointerup', closeGate);
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter' || event.key === 'Escape') closeGate();
+  });
+
+  setTimeout(() => {
+    const currentGate = $('#gate');
+    if (currentGate && !currentGate.classList.contains('is-hidden') && skipBtn) {
+      skipBtn.textContent = '入場する';
+    }
+  }, 1800);
+
+  // 端末やキャッシュでクリック処理が不安定な場合でも、導入画面で詰まらないための保険。
+  setTimeout(() => {
+    const currentGate = $('#gate');
+    if (currentGate && !currentGate.classList.contains('is-hidden')) closeGate();
+  }, 8500);
+}
 
 function updateCountdown() {
   const now = new Date();
@@ -48,19 +69,25 @@ function updateCountdown() {
   const mins = Math.floor(diff / 60000) % 60;
   const secs = Math.floor(diff / 1000) % 60;
 
-  $('#days').textContent = days;
-  $('#hours').textContent = pad(hours);
-  $('#mins').textContent = pad(mins);
-  $('#secs').textContent = pad(secs);
-  $('#statusLabel').textContent = label;
+  const daysEl = $('#days');
+  const hoursEl = $('#hours');
+  const minsEl = $('#mins');
+  const secsEl = $('#secs');
+  const statusEl = $('#statusLabel');
+
+  if (daysEl) daysEl.textContent = days;
+  if (hoursEl) hoursEl.textContent = pad(hours);
+  if (minsEl) minsEl.textContent = pad(mins);
+  if (secsEl) secsEl.textContent = pad(secs);
+  if (statusEl) statusEl.textContent = label;
 }
 
 updateCountdown();
 setInterval(updateCountdown, 1000);
 
-navToggle?.addEventListener('click', () => nav.classList.toggle('open'));
+navToggle?.addEventListener('click', () => nav?.classList.toggle('open'));
 document.querySelectorAll('.nav a').forEach((link) => {
-  link.addEventListener('click', () => nav.classList.remove('open'));
+  link.addEventListener('click', () => nav?.classList.remove('open'));
 });
 
 const revealObserver = new IntersectionObserver((entries) => {
@@ -74,9 +101,9 @@ document.querySelectorAll('.reveal').forEach((element) => revealObserver.observe
 let apparitionTimer;
 window.addEventListener('scroll', () => {
   document.documentElement.style.setProperty('--scroll', String(window.scrollY));
-  header.classList.toggle('is-scrolled', window.scrollY > 24);
+  header?.classList.toggle('is-scrolled', window.scrollY > 24);
 
-  if (window.scrollY > 760 && window.scrollY < 2200) {
+  if (apparition && window.scrollY > 760 && window.scrollY < 2200) {
     apparition.classList.add('show');
     clearTimeout(apparitionTimer);
     apparitionTimer = setTimeout(() => apparition.classList.remove('show'), 980);
@@ -109,11 +136,16 @@ function loadComments() {
 }
 
 function saveComments(comments) {
-  localStorage.setItem(COMMENT_KEY, JSON.stringify(comments));
+  try {
+    localStorage.setItem(COMMENT_KEY, JSON.stringify(comments));
+  } catch {
+    // localStorage が使えない環境では表示だけ継続する。
+  }
 }
 
 function renderComments() {
   const list = $('#commentList');
+  if (!list) return;
   const comments = loadComments();
   list.innerHTML = comments.map((comment) => `
     <article class="voice-item">
@@ -125,12 +157,12 @@ function renderComments() {
 
 $('#commentForm')?.addEventListener('submit', (event) => {
   event.preventDefault();
-  const name = $('#name').value.trim() || '匿名';
-  const bodyText = $('#body').value.trim();
+  const name = $('#name')?.value.trim() || '匿名';
+  const bodyText = $('#body')?.value.trim() || '';
   const status = $('#formStatus');
 
   if (!bodyText) {
-    status.textContent = 'コメントを入力してください。';
+    if (status) status.textContent = 'コメントを入力してください。';
     return;
   }
 
@@ -141,8 +173,9 @@ $('#commentForm')?.addEventListener('submit', (event) => {
     time: new Date().toLocaleDateString('ja-JP')
   });
   saveComments(comments.slice(0, 24));
-  $('#body').value = '';
-  status.textContent = '声を残しました。';
+  const bodyInput = $('#body');
+  if (bodyInput) bodyInput.value = '';
+  if (status) status.textContent = '声を残しました。';
   renderComments();
 });
 
