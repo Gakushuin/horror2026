@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="g" cx="50%" cy="35%" r="70%">
+      <stop offset="0" stop-color="#41050c"/>
+      <stop offset="0.48" stop-color="#130306"/>
+      <stop offset="1" stop-color="#030102"/>
+    </radialGradient>
+    <filter id="noise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.17"/></feComponentTransfer>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <rect width="1200" height="630" filter="url(#noise)" opacity="0.42"/>
+  <path d="M180 475 C330 410 485 520 650 455 C785 400 900 445 1035 390" fill="none" stroke="#8d1621" stroke-width="28" stroke-linecap="round" opacity="0.85"/>
+  <text x="600" y="255" text-anchor="middle" fill="#f7eeee" font-family="serif" font-size="86" font-weight="700">血洗いの池</text>
+  <text x="600" y="350" text-anchor="middle" fill="#ff8d96" font-family="serif" font-size="112" font-weight="700">深層</text>
+  <text x="600" y="420" text-anchor="middle" fill="#d8bd82" font-family="sans-serif" font-size="28" letter-spacing="6">GAKUSHUIN UNIVERSITY HAUNTED HOUSE 2026</text>
+</svg>
