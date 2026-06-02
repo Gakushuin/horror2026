@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@500;700;900&family=Yuji+Syuku&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=20260602-2">
 </head>
 <body>
   <div class="grain" aria-hidden="true"></div>
@@ -25,8 +25,8 @@
       <p class="gate__overline">GAKUSHUIN UNIVERSITY HAUNTED HOUSE 2026</p>
       <h1>血洗いの池<br><span>深層</span></h1>
       <p class="gate__text">この先は、学習院高等科で終わったはずの噂の続きです。</p>
-      <button class="gate__button" id="enterBtn">池の底を覗く</button>
-      <button class="gate__skip" id="skipBtn">通常表示で見る</button>
+      <button class="gate__button" id="enterBtn" onclick="document.body.classList.remove('locked');document.getElementById('gate')?.classList.add('is-hidden');setTimeout(()=>document.getElementById('gate')?.remove(),700);">池の底を覗く</button>
+      <button class="gate__skip" id="skipBtn" onclick="document.body.classList.remove('locked');document.getElementById('gate')?.classList.add('is-hidden');setTimeout(()=>document.getElementById('gate')?.remove(),700);">通常表示で見る</button>
     </div>
   </div>
 
@@ -186,6 +186,6 @@
     </div>
   </footer>
 
-  <script src="app.js"></script>
+  <script src="app.js?v=20260602-2"></script>
 </body>
 </html>
