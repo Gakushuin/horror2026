@@ -1,20 +1,26 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
   <defs>
-    <radialGradient id="g" cx="50%" cy="35%" r="70%">
-      <stop offset="0" stop-color="#41050c"/>
-      <stop offset="0.48" stop-color="#130306"/>
-      <stop offset="1" stop-color="#030102"/>
+    <radialGradient id="bg" cx="50%" cy="35%" r="78%">
+      <stop offset="0" stop-color="#4a050c"/>
+      <stop offset="0.36" stop-color="#150206"/>
+      <stop offset="1" stop-color="#010001"/>
     </radialGradient>
     <filter id="noise">
-      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch"/>
+      <feTurbulence type="fractalNoise" baseFrequency="0.72" numOctaves="4" stitchTiles="stitch"/>
       <feColorMatrix type="saturate" values="0"/>
-      <feComponentTransfer><feFuncA type="table" tableValues="0 0.17"/></feComponentTransfer>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 0.22"/></feComponentTransfer>
     </filter>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
   </defs>
-  <rect width="1200" height="630" fill="url(#g)"/>
-  <rect width="1200" height="630" filter="url(#noise)" opacity="0.42"/>
-  <path d="M180 475 C330 410 485 520 650 455 C785 400 900 445 1035 390" fill="none" stroke="#8d1621" stroke-width="28" stroke-linecap="round" opacity="0.85"/>
-  <text x="600" y="255" text-anchor="middle" fill="#f7eeee" font-family="serif" font-size="86" font-weight="700">血洗いの池</text>
-  <text x="600" y="350" text-anchor="middle" fill="#ff8d96" font-family="serif" font-size="112" font-weight="700">深層</text>
-  <text x="600" y="420" text-anchor="middle" fill="#d8bd82" font-family="sans-serif" font-size="28" letter-spacing="6">GAKUSHUIN UNIVERSITY HAUNTED HOUSE 2026</text>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" filter="url(#noise)" opacity="0.45"/>
+  <circle cx="600" cy="330" r="188" fill="none" stroke="#2b0508" stroke-width="30" opacity="0.75"/>
+  <ellipse cx="600" cy="390" rx="410" ry="86" fill="none" stroke="#6f0b15" stroke-width="18" opacity="0.72"/>
+  <ellipse cx="600" cy="390" rx="268" ry="55" fill="none" stroke="#b31927" stroke-width="7" opacity="0.6"/>
+  <path d="M210 486 C330 420 456 521 598 456 C724 399 885 453 1018 382" fill="none" stroke="#a41421" stroke-width="30" stroke-linecap="round" opacity="0.88" filter="url(#glow)"/>
+  <path d="M500 88 L700 88 L720 500 L680 560 L650 500 L620 570 L594 505 L558 562 L528 500 Z" fill="#eadbd3" opacity="0.14"/>
+  <text x="600" y="248" text-anchor="middle" fill="#f7eeee" font-family="serif" font-size="90" font-weight="700" filter="url(#glow)">血洗いの池</text>
+  <text x="600" y="356" text-anchor="middle" fill="#ff7b84" font-family="serif" font-size="126" font-weight="700" filter="url(#glow)">深層</text>
+  <text x="600" y="430" text-anchor="middle" fill="#d0ad6c" font-family="sans-serif" font-size="27" letter-spacing="7">GAKUSHUIN UNIVERSITY HAUNTED HOUSE 2026</text>
+  <text x="600" y="486" text-anchor="middle" fill="#cdb8b8" font-family="sans-serif" font-size="22" letter-spacing="3">その池は、大学の奥で、まだ濁っている。</text>
 </svg>
