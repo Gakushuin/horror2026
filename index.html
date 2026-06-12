@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#050103">
   <title>血洗いの池 〜残穢〜 | 学習院大学ホラー企画</title>
-  <meta name="description" content="学習院大学ホラー企画『血洗いの池 〜残穢〜』公式ティザーサイト。噂、記録、匿名の声をたどり、池の底に残った穢れへ近づく。">
+  <meta name="description" content="学習院大学ホラー企画『血洗いの池 〜残穢〜』公式サイト。開催情報、整理券、注意事項、企画概要を掲載しています。">
   <meta property="og:title" content="血洗いの池 〜残穢〜">
-  <meta property="og:description" content="まだ、洗い終わっていない。学習院大学ホラー企画公式ティザーサイト。">
+  <meta property="og:description" content="学習院大学ホラー企画『血洗いの池 〜残穢〜』公式サイト。">
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/poster.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,20 +18,17 @@
 <body>
   <div class="grain" aria-hidden="true"></div>
   <div class="vignette" aria-hidden="true"></div>
-  <div class="blood-light" aria-hidden="true"></div>
 
-  <div class="opening" id="opening" role="dialog" aria-label="オープニング演出">
+  <div class="opening" id="opening" role="dialog" aria-label="サイト入口">
     <div class="opening__bg"></div>
-    <div class="opening__scan" aria-hidden="true"></div>
     <div class="opening__content">
-      <p class="opening__eyebrow">CONFIDENTIAL / ZAN-E FILE 2026</p>
+      <p class="opening__eyebrow">GAKUSHUIN HORROR PROJECT 2026</p>
       <h1>血洗いの池<span>〜残穢〜</span></h1>
-      <p class="opening__lead">この先には、来場者の記録と、まだ消えていない噂が含まれます。</p>
+      <p class="opening__lead">公式サイトへようこそ。開催情報と注意事項を確認してからご来場ください。</p>
       <div class="opening__buttons">
-        <button id="enterBtn" class="btn btn-primary">記録を開く</button>
-        <button id="skipBtn" class="btn btn-ghost">演出なしで見る</button>
+        <button id="enterBtn" class="btn btn-primary">サイトを見る</button>
+        <a class="btn btn-ghost" href="#info" id="skipBtn">開催情報へ</a>
       </div>
-      <p class="opening__hint">Enter / Escape でも開始できます</p>
     </div>
   </div>
 
@@ -45,11 +42,12 @@
         <span></span><span></span><span></span>
       </button>
       <nav class="nav" id="nav" aria-label="サイト内メニュー">
+        <a href="#about">概要</a>
         <a href="#story">物語</a>
-        <a href="#experience">体験</a>
-        <a href="#visuals">記録</a>
+        <a href="#experience">体験内容</a>
         <a href="#info">開催情報</a>
-        <a href="#voices">匿名の声</a>
+        <a href="#notice">注意事項</a>
+        <a href="#faq">FAQ</a>
       </nav>
     </div>
   </header>
@@ -60,19 +58,19 @@
       <div class="hero__fog" aria-hidden="true"></div>
       <div class="container hero__grid">
         <div class="hero__copy reveal">
-          <p class="eyebrow">GAKUSHUIN UNIVERSITY / HAUNTED HOUSE / 2026</p>
-          <h2 class="hero__title glitch" data-text="血洗いの池">血洗いの池<span>〜残穢〜</span></h2>
-          <p class="hero__lead">高等科で終わったはずの怪異は、大学の夜へ沈んだ。静かな池、濡れた廊下、誰もいないはずの窓。そのどこにも、まだ穢れだけが残っている。</p>
+          <p class="eyebrow">WALK-THROUGH HAUNTED HOUSE</p>
+          <h2 class="hero__title">血洗いの池<span>〜残穢〜</span></h2>
+          <p class="hero__lead">静かな水面に、まだ消えていない噂が沈んでいる。教室を進みながら物語の痕跡をたどる、学習院大学ホラー企画です。</p>
           <div class="hero__actions">
-            <a class="btn btn-primary" href="#story">物語を読む</a>
-            <a class="btn btn-ghost" href="#experience">入場前に確認</a>
+            <a class="btn btn-primary" href="#info">開催情報を見る</a>
+            <a class="btn btn-ghost" href="#notice">注意事項を確認</a>
           </div>
         </div>
 
-        <aside class="hero__panel reveal delay-1" aria-label="開催カウントダウン">
+        <aside class="hero__panel reveal delay-1" aria-label="開催概要">
           <div class="status-card">
             <div class="status-card__head">
-              <span>OPENING COUNTDOWN</span>
+              <span>STATUS</span>
               <b id="statusText">準備中</b>
             </div>
             <div class="countdown" aria-live="polite">
@@ -81,15 +79,29 @@
               <div><strong id="mins">--</strong><small>mins</small></div>
               <div><strong id="secs">--</strong><small>secs</small></div>
             </div>
-            <p>開催日・教室・整理券の詳細は確定後に更新します。現在は世界観公開用のティザー版です。</p>
-          </div>
-          <div class="signal-card">
-            <span>DETECTED SIGNAL</span>
-            <strong id="signalText">mizube / noise / 0.72</strong>
+            <dl class="mini-info">
+              <div><dt>会場</dt><dd>学習院大学 目白キャンパス内 教室予定</dd></div>
+              <div><dt>入場</dt><dd>混雑時は整理券制を予定</dd></div>
+              <div><dt>詳細</dt><dd>確定次第、このページで更新</dd></div>
+            </dl>
           </div>
         </aside>
       </div>
       <div class="scrollcue" aria-hidden="true">SCROLL</div>
+    </section>
+
+    <section class="section section--about" id="about">
+      <div class="container about-grid">
+        <div class="section__head reveal">
+          <p class="section__eyebrow">ABOUT</p>
+          <h3>このサイトについて</h3>
+          <p>ここでは、企画の概要・開催情報・当日の案内をまとめて掲載します。</p>
+        </div>
+        <div class="about-card reveal delay-1">
+          <p>『血洗いの池 〜残穢〜』は、教室を使ったウォークスルー型のお化け屋敷です。来場者は少人数ずつ入場し、暗い空間・音・装飾・ストーリー演出を通して、池にまつわる噂の続きを体験します。</p>
+          <p>写真素材はギャラリーとして見せるのではなく、サイト全体の背景や質感として使用しています。実際の会場写真・当日写真ではない場合があるため、会場の詳細は「開催情報」をご確認ください。</p>
+        </div>
+      </div>
     </section>
 
     <section class="section section--story" id="story">
@@ -97,87 +109,50 @@
         <div class="section__head reveal">
           <p class="section__eyebrow">STORY</p>
           <h3>噂は、形を変えて残った。</h3>
-          <p>前作を知っている人ほど、最初の違和感に気づく。</p>
+          <p>物語を知ってから入ると、細かい演出をより楽しめます。</p>
         </div>
         <article class="storycard reveal">
-          <p>高等科の文化祭で語られた「血洗いの池」の事件は、終幕を迎えたように見えた。</p>
-          <p>けれど、数か月後。学習院大学の構内で、同じ夢を見る学生が現れ始める。濡れた床を歩く足音。誰もいない教室の窓。池を覗いた瞬間に聞こえる、浅い呼吸。</p>
+          <p>高等科の文化祭で語られた「血洗いの池」の事件は、終わったはずだった。</p>
+          <p>しかし数か月後、学習院大学の構内で、同じ夢を見る学生が現れ始める。濡れた床を歩く足音。誰もいない教室の窓。池を覗いた瞬間に聞こえる、浅い呼吸。</p>
           <p class="storycard__quote">「まだ、洗い終わっていない。」</p>
-          <p>ある教室の机から見つかった紙には、その一文と、前作の整理券番号だけが残されていた。来場者は、残された穢れの痕跡をたどりながら、池の底に沈んだ“本当の続き”へ進むことになる。</p>
+          <p>来場者は、教室に残された痕跡をたどりながら、池の底に沈んだ“続き”へ近づいていく。</p>
         </article>
       </div>
     </section>
 
-    <section class="section" id="experience">
+    <section class="section section--experience" id="experience">
       <div class="container">
         <div class="section__head reveal">
           <p class="section__eyebrow">EXPERIENCE</p>
-          <h3>入場前に確認する3つの記録</h3>
-          <p>ただ驚かせるだけではなく、物語を追う没入型の教室お化け屋敷を想定しています。</p>
+          <h3>体験内容</h3>
+          <p>短時間で楽しめる、教室型のお化け屋敷を予定しています。</p>
         </div>
         <div class="feature-grid">
           <article class="feature-card reveal">
             <span class="feature-card__num">01</span>
-            <h4>池の噂</h4>
-            <p>キャンパスに残る水辺の違和感を軸に、前作から続く“残穢”の正体へ近づきます。</p>
+            <h4>少人数入場</h4>
+            <p>安全確保と没入感のため、数名ずつ順番にご案内する予定です。</p>
           </article>
           <article class="feature-card reveal delay-1">
             <span class="feature-card__num">02</span>
-            <h4>記録の断片</h4>
-            <p>貼り紙、番号、残されたメモ。来場者が自分で手がかりを拾って進む構成です。</p>
+            <h4>ストーリー演出</h4>
+            <p>ただ驚かせるだけでなく、教室内の装飾や音で物語を感じられる構成です。</p>
           </article>
           <article class="feature-card reveal delay-2">
             <span class="feature-card__num">03</span>
-            <h4>最後の教室</h4>
-            <p>出口だと思った場所で、物語の意味が反転するような余韻を狙います。</p>
-          </article>
-        </div>
-        <div class="terminal reveal" aria-live="polite">
-          <div class="terminal__bar"><span></span><span></span><span></span><b>visitor-log.exe</b></div>
-          <p id="terminalText">来場者データを照合中……</p>
-          <button class="terminal__btn" id="scanBtn" type="button">痕跡をスキャン</button>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section--visuals" id="visuals">
-      <div class="container">
-        <div class="section__head reveal">
-          <p class="section__eyebrow">VISUAL FILES</p>
-          <h3>残された景色</h3>
-          <p>現場に近いイメージとして記録された、5つの断片。</p>
-        </div>
-        <div class="gallery">
-          <article class="gallery__item wide reveal">
-            <img src="assets/poster.jpg" alt="血洗いの池 残穢 キービジュアル" loading="lazy">
-            <div class="gallery__caption"><h4>Official Key Visual</h4><p>大学編の世界観を象徴するキービジュアル。池、校舎、そして残穢。</p></div>
-          </article>
-          <article class="gallery__item reveal">
-            <img src="assets/path.jpg" alt="霧の夜のキャンパスの小道" loading="lazy">
-            <div class="gallery__caption"><h4>Night Path</h4><p>霧が立ちこめる小道。窓の奥には、見てはいけない影が立っている。</p></div>
-          </article>
-          <article class="gallery__item reveal delay-1">
-            <img src="assets/hallway.jpg" alt="薄暗い校舎の廊下" loading="lazy">
-            <div class="gallery__caption"><h4>Wet Hallway</h4><p>床は濡れ、壁には手形。奥には誰かが立っている。</p></div>
-          </article>
-          <article class="gallery__item reveal">
-            <img src="assets/hand.jpg" alt="赤黒い池から伸びる手" loading="lazy">
-            <div class="gallery__caption"><h4>Hand in the Water</h4><p>池に沈んだものは、たまにこちらへ手を伸ばす。</p></div>
-          </article>
-          <article class="gallery__item reveal delay-1">
-            <img src="assets/lake.jpg" alt="夜の池と校舎の風景" loading="lazy">
-            <div class="gallery__caption"><h4>Misty Lake</h4><p>静かな水面ほど、何かを隠している。</p></div>
+            <h4>整理券対応</h4>
+            <p>混雑状況に応じて整理券制にし、待ち時間が長くなりすぎないよう案内します。</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section section--dark" id="info">
+    <section class="section section--info" id="info">
       <div class="container">
         <div class="section__head reveal">
           <p class="section__eyebrow">INFORMATION</p>
           <h3>開催情報</h3>
-          <p>確定前の情報は「予定」として掲載しています。</p>
+          <p>未確定の項目は、決まり次第このページで更新します。</p>
         </div>
         <div class="info-grid">
           <div class="info-card reveal">
@@ -186,70 +161,81 @@
               <div><dt>企画名</dt><dd>血洗いの池 〜残穢〜</dd></div>
               <div><dt>会場</dt><dd>学習院大学 目白キャンパス内 教室予定</dd></div>
               <div><dt>形式</dt><dd>教室型ウォークスルーお化け屋敷</dd></div>
-              <div><dt>公開状況</dt><dd>ティザー公開中 / 詳細は順次更新</dd></div>
+              <div><dt>対象</dt><dd>暗所・大きな音が苦手な方はご注意ください</dd></div>
             </dl>
           </div>
           <div class="info-card reveal delay-1">
-            <h4>当日の流れ</h4>
+            <h4>入場までの流れ</h4>
             <ol class="steps">
-              <li><b>受付</b><span>本サイト、またはキャンパス内の案内表示を確認。</span></li>
-              <li><b>整理券</b><span>混雑時は整理券制を予定。番号順に案内します。</span></li>
-              <li><b>入場</b><span>少人数ずつ、池の底へ進んでもらいます。</span></li>
+              <li><b>1</b><span>当日の案内表示、またはこのサイトで受付場所を確認。</span></li>
+              <li><b>2</b><span>混雑時は整理券を受け取り、番号順に待機。</span></li>
+              <li><b>3</b><span>スタッフの案内に従って少人数ずつ入場。</span></li>
+              <li><b>4</b><span>退場後は次の来場者のため、通路に立ち止まらず移動。</span></li>
             </ol>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="warning">
+    <section class="section section--notice" id="notice">
       <div class="container">
         <div class="section__head reveal">
-          <p class="section__eyebrow">CAUTION</p>
-          <h3>戻れなくなる前に。</h3>
-          <p>安全に楽しむための注意事項です。</p>
+          <p class="section__eyebrow">NOTICE</p>
+          <h3>注意事項</h3>
+          <p>安全に楽しんでいただくため、入場前に必ずご確認ください。</p>
         </div>
-        <div class="warn-grid">
-          <article class="warn-card reveal">
-            <h4>入場時の注意</h4>
+        <div class="notice-grid">
+          <article class="notice-card reveal">
+            <h4>入場時</h4>
             <ul>
               <li>走らないでください。</li>
               <li>スタッフ・装飾・機材には触れないでください。</li>
-              <li>途中で体調が悪くなった場合は、すぐにスタッフへ声をかけてください。</li>
+              <li>体調が悪い場合は、無理をせずスタッフにお声がけください。</li>
             </ul>
           </article>
-          <article class="warn-card reveal delay-1">
+          <article class="notice-card reveal delay-1">
             <h4>撮影・SNS</h4>
             <ul>
-              <li>内部のネタバレ撮影は制限する場合があります。</li>
-              <li>外観・感想の投稿は歓迎です。</li>
-              <li>ハッシュタグや詳細情報は公開時に追記します。</li>
+              <li>内部のネタバレになる撮影は制限する場合があります。</li>
+              <li>外観や感想の投稿は歓迎です。</li>
+              <li>投稿時のハッシュタグは決まり次第掲載します。</li>
+            </ul>
+          </article>
+          <article class="notice-card reveal delay-2">
+            <h4>苦手な方へ</h4>
+            <ul>
+              <li>暗所、大きな音、急な演出が含まれる可能性があります。</li>
+              <li>小さなお子様や体調に不安のある方は、入場前にご相談ください。</li>
+              <li>途中退出を希望する場合は、近くのスタッフにお知らせください。</li>
             </ul>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section section--voices" id="voices">
-      <div class="container">
+    <section class="section section--faq" id="faq">
+      <div class="container narrow">
         <div class="section__head reveal">
-          <p class="section__eyebrow">ANONYMOUS VOICES</p>
-          <h3>匿名の声</h3>
-          <p>端末内に保存される簡易コメント欄です。公開掲示板ではありません。</p>
+          <p class="section__eyebrow">FAQ</p>
+          <h3>よくある質問</h3>
         </div>
-        <div class="voices-grid">
-          <form class="voice-form reveal" id="commentForm">
-            <label>名前<input type="text" id="name" maxlength="18" placeholder="匿名"></label>
-            <label>コメント<textarea id="body" rows="5" maxlength="140" placeholder="感想・期待・噂"></textarea></label>
-            <button class="btn btn-primary" type="submit">声を残す</button>
-            <p id="formStatus">140字まで保存できます。</p>
-          </form>
-          <div class="voice-list reveal delay-1" id="commentList"></div>
+        <div class="faq-list reveal">
+          <details open>
+            <summary>予約は必要ですか？</summary>
+            <p>現時点では詳細未定です。混雑時は整理券制を予定しています。</p>
+          </details>
+          <details>
+            <summary>どのくらい怖いですか？</summary>
+            <p>暗い空間・音・急な演出を含む可能性があります。苦手な方は無理をせず、スタッフにご相談ください。</p>
+          </details>
+          <details>
+            <summary>会場の場所はどこですか？</summary>
+            <p>学習院大学 目白キャンパス内の教室を予定しています。教室番号は確定後に掲載します。</p>
+          </details>
         </div>
       </div>
     </section>
   </main>
-
-  <div class="apparition" id="ghost" aria-hidden="true"></div>
 
   <footer class="footer">
     <div class="container footer__inner">
