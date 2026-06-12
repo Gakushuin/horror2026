@@ -9,6 +9,7 @@ const skipBtn = $('#skipBtn');
 const header = $('#header');
 const menuBtn = $('#menuBtn');
 const nav = $('#nav');
+const creepyHand = $('#creepyHand');
 
 function closeOpening() {
   if (!opening) return;
@@ -84,6 +85,24 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.reveal').forEach((element) => revealObserver.observe(element));
 
+let handCooldown = false;
+function showCreepyHand() {
+  if (!creepyHand || handCooldown) return;
+  creepyHand.classList.add('show');
+  handCooldown = true;
+
+  setTimeout(() => {
+    creepyHand.classList.remove('show');
+  }, 1900);
+
+  setTimeout(() => {
+    handCooldown = false;
+  }, 5200);
+}
+
 window.addEventListener('scroll', () => {
   header?.classList.toggle('scrolled', window.scrollY > 16);
+
+  const triggerPoint = Math.min(850, document.body.scrollHeight * 0.18);
+  if (window.scrollY > triggerPoint) showCreepyHand();
 }, { passive: true });
